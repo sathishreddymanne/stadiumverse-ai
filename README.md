@@ -69,14 +69,39 @@ Toggles a global high-contrast red theme override across all dashboards. Provide
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Complete Technology Stack & Specifications
 
-* **Framework**: Next.js 16 (App Router, Turbopack)
-* **Styling**: Tailwind CSS v4.0 (CSS-first config, oklab gradient animations)
-* **Animations**: Framer Motion & CSS Keyframes
-* **State Management**: React Context (`StadiumContext.tsx`)
-* **Icons**: Lucide React
-* **Hosting/Development**: Local dev environment + ngrok HTTPS tunnel
+StadiumVerse AI is engineered using a modern, performant, and visual-first software stack designed for real-time responsiveness and aesthetic polish.
+
+### 1. Front-End Core & Framework
+* **Next.js 16.2 (App Router)**: Utilizing Server-Side Rendering (SSR) for initial loads, dynamic React Server Components, and Next.js static optimizations.
+* **React 19**: Powered by React's latest hooks, state preservation, and concurrent hydration cycles.
+* **TypeScript**: Strict type definitions for mock dataset items (Stadiums, Matches, Volunteers, Parking Grid, and Concession Inventories) ensuring clean compile validation.
+
+### 2. Styling & Design Architecture
+* **Tailwind CSS v4.0 (CSS-First)**: Leverages Tailwind's brand new CSS-in-JS compilation system, featuring inline custom themes, container queries, and HSL dynamic modifiers.
+* **Glassmorphism Spec**: High-intensity backdrop blur filters (`backdrop-blur-xl`), custom border transparency overlays (`border-white/[0.07]`), and radial gradient shadows.
+* **Adaptive Typography**: Google Fonts integration (`Outfit` for high-impact display titles, `Inter` for clean technical readouts).
+
+### 3. Motion & Animation Engine
+* **Framer Motion**: Spring-based layout animations, page-to-page tab slide transitions (`AnimatePresence`), and interactive card lifts (4px Y-translation on hover).
+* **Hardware-Accelerated CSS Keyframes**: Custom animations in `globals.css` (e.g., `mesh-flow` gradient loops, `pulse-slow` glowing meshes, `fade-in-up`, and `fade-in-scale`) to bypass client JS delays on initial page loads.
+
+### 4. Interactive Assets & Engines
+* **Custom SVG Vector Pathfinding**: Custom Top-Down Stadium Blueprint with dynamic, coordinates-bound SVG path drawing.
+* **Auditory Narration Simulator**: Screen-reader voice logging that triggers audio narration lines on hover states.
+* **Interactive Parking Reserves Grid**: Dynamic grid array state calculations updating available capacities live.
+* **Lucide Icons**: High-fidelity, scalable SVG UI assets for operations dashboards.
+
+### 5. Local Mock Telemetry & AI Synthesis
+* **React Context API**: Central state store (`StadiumContext.tsx`) syncing gate scan rates, parking spaces, food queue times, active volunteer shift task checkmarks, and emergency overrides.
+* **AI Copilot Service**: Generates real-time, context-aware instructions for fans, organizers, and security dispatch.
+* **Translation Simulator**: Translates alerts across 10 official FIFA languages, mimicking actual PA announcer audio output.
+
+### 6. Development, Tunneling & Verification Tooling
+* **Next.js Turbopack**: High-speed incremental compiler for quick compilation.
+* **Git**: Repository version control.
+* **ngrok**: HTTPS tunneling agent used to securely expose the local environment to remote reviewers with allowed HMR dev origins configured.
 
 ---
 
