@@ -2,6 +2,8 @@
 
 ### *The Generative-AI Operating System for FIFA World Cup 2026 Stadiums*
 
+![StadiumVerse AI Project Banner](public/images/stadiumverse_banner.png)
+
 ---
 
 [![GitHub License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -66,6 +68,18 @@ Tracks carbon offsets, awards Eco-Points badges for choosing public transit, and
 
 ### 8. 🚨 Emergency Evacuation & Red Override
 Toggles a global high-contrast red theme override across all dashboards. Provides exit maps, medical center dispatch details, and a step-by-step evacuation guide.
+
+---
+
+## 📸 Platform Previews
+
+### Tournament Operations Console
+*A preview of the dark-mode control panels showing analytics widgets, telemetry rings, and heatmaps.*
+![Operations Console Preview](public/images/dashboard_preview.png)
+
+### Conversational Copilot Assistant
+*Interactive message flows with glassmorphism chat widgets and context-aware action triggers.*
+![Conversational Copilot Preview](public/images/copilot_preview.png)
 
 ---
 
