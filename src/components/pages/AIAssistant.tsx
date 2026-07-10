@@ -14,7 +14,7 @@ import {
   RotateCcw,
   Loader2
 } from "lucide-react";
-import { useStadium } from "../../context/StadiumContext";
+import { useStadium, PageType } from "../../context/StadiumContext";
 import { getAIResponse, AIResponse } from "../../services/aiService";
 import { GlassCard } from "../primitives/GlassCard";
 import { GradientButton } from "../primitives/GradientButton";
