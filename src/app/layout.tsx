@@ -14,8 +14,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "StadiumVerse AI — FIFA World Cup Stadium Co-Pilot",
-  description: "A Generative-AI platform coordinating navigation, safety, accessibility, and real-time operations across FIFA World Cup 2026 venues.",
+  title: "StadiumVerse AI — FIFA World Cup 2026 Smart Stadiums & Tournament Operations",
+  description: "GenAI-powered real-time assistant and operations console optimizing wait times, multilingual translation, accessibility navigation, security dispatches, and crowd logistics for the FIFA World Cup 2026.",
 };
 
 export default function RootLayout({
