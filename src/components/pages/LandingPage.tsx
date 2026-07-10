@@ -165,7 +165,7 @@ export const LandingPage: React.FC = () => {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 border border-accent-blue/20 mb-8 animate-fade-in-scale"
         >
           <Sparkles className="w-4 h-4 text-accent-blue animate-pulse" />
-          <span className="text-xs font-semibold text-accent-blue tracking-wide">Next-Gen Crowd Intelligence OS</span>
+          <span className="text-xs font-semibold text-accent-blue tracking-wide">FIFA 2026™ Smart Stadiums & Tournament Operations — Challenge 4</span>
         </div>
 
         {/* Headline */}
@@ -173,8 +173,8 @@ export const LandingPage: React.FC = () => {
           className="font-display font-bold text-5xl md:text-7xl text-center tracking-tight max-w-4xl leading-tight animate-fade-in-up"
           style={{ animationDelay: "100ms" }}
         >
-          The AI Operating System for{" "}
-          <span className="text-gradient">FIFA World Cup Stadiums</span>
+          GenAI Operating System for{" "}
+          <span className="text-gradient">FIFA World Cup 2026™ Operations</span>
         </h1>
 
         {/* Sub-text */}
@@ -182,7 +182,7 @@ export const LandingPage: React.FC = () => {
           className="text-text-secondary text-center max-w-2xl mt-6 text-base md:text-lg font-light leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "200ms" }}
         >
-          A Generative-AI platform that assists fans, volunteers, organizers, security, and transport teams with real-time navigation, crowd intelligence, accessibility, and emergency response.
+          GenAI-powered tournament operations console optimizing crowd waiting queues, accessibility wayfinding, live multi-lingual translation, safety responses, and real-time co-pilot guidance.
         </p>
 
         {/* CTAs */}

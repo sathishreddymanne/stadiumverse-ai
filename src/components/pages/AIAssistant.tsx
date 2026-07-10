@@ -258,15 +258,20 @@ export const AIAssistant: React.FC = () => {
               <Bot className="w-5 h-5 animate-pulse" />
             </div>
             <div>
-              <h3 className="font-bold text-xs uppercase tracking-wider">AI Stadium Co-Pilot</h3>
+              <h3 className="font-bold text-xs uppercase tracking-wider">AI Stadium Co-Pilot — FIFA 2026™</h3>
               <p className="text-[9px] text-text-secondary mt-0.5 font-light">
-                Connected to venue telemetry | Active City: {currentStadium.city}
+                GenAI Tournament Operations (Challenge 4) | Active City: {currentStadium.city}
               </p>
             </div>
           </div>
-          <span className="text-[9px] font-bold text-green-400 bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded-full uppercase">
-            ONLINE
-          </span>
+          <div className="flex gap-2">
+            <span className="text-[9px] font-bold text-accent-purple bg-accent-purple/10 border border-accent-purple/20 px-2 py-0.5 rounded-full uppercase">
+              CHALLENGE 4
+            </span>
+            <span className="text-[9px] font-bold text-green-400 bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded-full uppercase">
+              ONLINE
+            </span>
+          </div>
         </div>
 
         {/* Message Feed Container */}
