@@ -200,8 +200,9 @@ export const VolunteerPortal: React.FC = () => {
               <form onSubmit={handleAddTask} className="space-y-4">
                 <h3 className="font-bold text-xs uppercase tracking-wider text-text-secondary border-b border-white/[0.05] pb-2">Create Personal Task</h3>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Task Description:</label>
+                  <label htmlFor="personal-task-input" className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Task Description:</label>
                   <input
+                    id="personal-task-input"
                     type="text"
                     value={taskDescription}
                     onChange={(e) => setTaskDescription(e.target.value)}
@@ -276,8 +277,9 @@ export const VolunteerPortal: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                   {/* Category */}
                   <div className="space-y-1.5">
-                    <label className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Incident Category:</label>
+                    <label htmlFor="incident-category-select" className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Incident Category:</label>
                     <select
+                      id="incident-category-select"
                       value={incidentType}
                       onChange={(e) => setIncidentType(e.target.value)}
                       className="w-full bg-[#0e0f18] border border-white/[0.08] rounded-xl px-3.5 py-2.5 text-xs text-text-primary focus:outline-none cursor-pointer"
@@ -291,8 +293,9 @@ export const VolunteerPortal: React.FC = () => {
 
                   {/* Zone */}
                   <div className="space-y-1.5">
-                    <label className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Location / Zone:</label>
+                    <label htmlFor="incident-location-input" className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Location / Zone:</label>
                     <input
+                      id="incident-location-input"
                       type="text"
                       value={incidentZone}
                       onChange={(e) => setIncidentZone(e.target.value)}
@@ -324,8 +327,9 @@ export const VolunteerPortal: React.FC = () => {
 
                 {/* Description */}
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Incident Details:</label>
+                  <label htmlFor="incident-details-textarea" className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Incident Details:</label>
                   <textarea
+                    id="incident-details-textarea"
                     value={incidentDesc}
                     onChange={(e) => setIncidentDesc(e.target.value)}
                     rows={4}

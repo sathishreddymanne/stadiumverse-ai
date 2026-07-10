@@ -85,10 +85,10 @@ export const Settings: React.FC = () => {
 
           <form onSubmit={handleSaveSettings} className="space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Name */}
               <div className="space-y-1.5">
-                <label className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Full Name:</label>
+                <label htmlFor="settings-name-input" className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Full Name:</label>
                 <input
+                  id="settings-name-input"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -96,10 +96,10 @@ export const Settings: React.FC = () => {
                 />
               </div>
 
-              {/* Email */}
               <div className="space-y-1.5">
-                <label className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Email Address:</label>
+                <label htmlFor="settings-email-input" className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Email Address:</label>
                 <input
+                  id="settings-email-input"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -210,8 +210,9 @@ export const Settings: React.FC = () => {
 
               {/* Subject */}
               <div className="space-y-1.5">
-                <label className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Subject Inquiry:</label>
+                <label htmlFor="contact-subject-input" className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Subject Inquiry:</label>
                 <input
+                  id="contact-subject-input"
                   type="text"
                   value={contactSubject}
                   onChange={(e) => setContactSubject(e.target.value)}
@@ -221,8 +222,9 @@ export const Settings: React.FC = () => {
 
               {/* Message */}
               <div className="space-y-1.5">
-                <label className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Message Details:</label>
+                <label htmlFor="contact-message-textarea" className="text-[10px] text-text-secondary uppercase tracking-wider font-semibold block">Message Details:</label>
                 <textarea
+                  id="contact-message-textarea"
                   value={contactMsg}
                   onChange={(e) => setContactMsg(e.target.value)}
                   rows={4}

@@ -44,6 +44,14 @@ export const GlassCard: React.FC<GlassCardProps> = ({
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={onClick ? (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onClick();
+        }
+      } : undefined}
       className={`
         bg-white/[0.03] backdrop-blur-xl border border-white/[0.07] rounded-[20px] 
         shadow-2xl transition-all duration-300

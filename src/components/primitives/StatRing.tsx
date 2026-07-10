@@ -35,9 +35,16 @@ export const StatRing: React.FC<StatRingProps> = ({
   const grad = getGradientIds();
 
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
+    <div 
+      className={`flex flex-col items-center justify-center ${className}`}
+      role="progressbar"
+      aria-valuenow={value}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-label={title}
+    >
       <div className="relative" style={{ width: size, height: size }}>
-        <svg className="transform -rotate-90 w-full h-full">
+        <svg className="transform -rotate-90 w-full h-full" aria-hidden="true">
           {/* Definitions for Gradients */}
           <defs>
             <linearGradient id={grad.id} x1="0%" y1="0%" x2="100%" y2="100%">

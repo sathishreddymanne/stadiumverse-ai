@@ -328,11 +328,13 @@ export const AIAssistant: React.FC = () => {
             onChange={(e) => setQuery(e.target.value)}
             disabled={isTyping}
             placeholder={isTyping ? "AI is processing..." : "Ask about gate congestion, food wait times, parking spaces, or transportation..."}
+            aria-label="Ask the stadium co-pilot assistant"
             className="flex-1 bg-white/[0.02] border border-white/[0.07] focus:border-accent-blue/50 rounded-xl px-4 py-3 text-xs text-text-primary focus:outline-none placeholder-text-secondary/50 font-light disabled:opacity-50"
           />
           <GradientButton
             type="submit"
             disabled={!query.trim() || isTyping}
+            aria-label="Send query"
             className="px-4 py-3 rounded-xl shrink-0"
           >
             <Send className="w-4 h-4" />
