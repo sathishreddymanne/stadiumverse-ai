@@ -1,6 +1,6 @@
 export interface AIResponse {
   text: string;
-  actions?: { label: string; page: string; payload?: any }[];
+  actions?: { label: string; page: string; payload?: unknown }[];
   suggestions?: string[];
 }
 

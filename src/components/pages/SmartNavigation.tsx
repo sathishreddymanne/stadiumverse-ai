@@ -31,9 +31,12 @@ export const SmartNavigation: React.FC = () => {
 
   // Restart path animation whenever route type changes
   useEffect(() => {
-    setDrawPath(false);
-    const timer = setTimeout(() => setDrawPath(true), 150);
-    return () => clearTimeout(timer);
+    const resetTimer = setTimeout(() => setDrawPath(false), 0);
+    const drawTimer = setTimeout(() => setDrawPath(true), 150);
+    return () => {
+      clearTimeout(resetTimer);
+      clearTimeout(drawTimer);
+    };
   }, [routeType]);
 
   // Route configurations

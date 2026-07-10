@@ -222,7 +222,7 @@ export const MultilingualLayer: React.FC = () => {
                 ) : (
                   <div className="space-y-4">
                     <p className="text-xs text-text-primary leading-relaxed font-light italic">
-                      "{translatedText}"
+                      &quot;{translatedText}&quot;
                     </p>
                     
                     <div className="flex justify-between items-center border-t border-white/[0.05] pt-3">
@@ -286,7 +286,7 @@ export const MultilingualLayer: React.FC = () => {
                         animate={{ opacity: 1 }}
                       >
                         <span className="text-[9px] uppercase font-bold text-text-secondary tracking-wide block">Original Input Speech</span>
-                        <span className="font-light text-text-primary block mt-0.5 italic">"{detectedTextOriginal}"</span>
+                        <span className="font-light text-text-primary block mt-0.5 italic">&quot;{detectedTextOriginal}&quot;</span>
                       </motion.div>
                     )}
 
@@ -297,7 +297,7 @@ export const MultilingualLayer: React.FC = () => {
                         className="border-t border-white/[0.05] pt-2"
                       >
                         <span className="text-[9px] uppercase font-bold text-green-400 tracking-wide block">AI English Translation</span>
-                        <span className="font-semibold text-text-primary block mt-0.5">"{detectedTextEnglish}"</span>
+                        <span className="font-semibold text-text-primary block mt-0.5">&quot;{detectedTextEnglish}&quot;</span>
                       </motion.div>
                     )}
                   </motion.div>

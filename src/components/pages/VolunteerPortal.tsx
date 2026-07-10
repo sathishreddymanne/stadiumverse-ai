@@ -181,7 +181,7 @@ export const VolunteerPortal: React.FC = () => {
                       {task.status !== "Completed" && (
                         <select
                           value={task.status}
-                          onChange={(e) => updateVolunteerTask(myVolunteer.id, task.id, e.target.value as any)}
+                          onChange={(e) => updateVolunteerTask(myVolunteer.id, task.id, e.target.value as "Completed" | "Pending" | "In Progress")}
                           className="bg-[#0e0f18] border border-white/[0.08] rounded px-2 py-0.5 text-[10px] text-text-primary focus:outline-none cursor-pointer"
                         >
                           <option value="Pending">Pending</option>
@@ -316,7 +316,7 @@ export const VolunteerPortal: React.FC = () => {
                           name="severity"
                           value={sev}
                           checked={incidentSeverity === sev}
-                          onChange={() => setIncidentSeverity(sev as any)}
+                          onChange={() => setIncidentSeverity(sev as "Low" | "Medium" | "High")}
                           className="accent-pink-500 cursor-pointer"
                         />
                         <span className={sev === "High" ? "text-red-400" : sev === "Medium" ? "text-amber-400" : "text-accent-blue"}>{sev} Priority</span>

@@ -261,7 +261,7 @@ export const AccessibilityCenter: React.FC = () => {
                   {/* Mock Video Feed */}
                   <div className="aspect-video w-full rounded-xl bg-white/[0.02] border border-white/[0.08] flex flex-col items-center justify-center text-center relative overflow-hidden">
                     <Video className="w-8 h-8 text-pink-500/40 animate-pulse" />
-                    <span className="text-[10px] text-text-secondary font-light mt-2 max-w-[80%]">Translating announcement: "Security Notice: All bags larger than 12x12x6 inches..."</span>
+                    <span className="text-[10px] text-text-secondary font-light mt-2 max-w-[80%]">Translating announcement: &quot;Security Notice: All bags larger than 12x12x6 inches...&quot;</span>
                     <div className="absolute bottom-2 right-2 flex gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-bounce" style={{ animationDelay: '0s' }} />
                       <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-bounce" style={{ animationDelay: '0.1s' }} />
@@ -281,7 +281,7 @@ export const AccessibilityCenter: React.FC = () => {
               </span>
             </div>
             <p className="text-[10px] text-text-secondary font-light leading-relaxed">
-              Test verbal search instructions: Click to simulate speaking "Where is Gate C elevator?"
+              Test verbal search instructions: Click to simulate speaking &quot;Where is Gate C elevator?&quot;
             </p>
             <GradientButton
               variant="secondary"

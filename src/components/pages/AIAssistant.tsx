@@ -168,20 +168,43 @@ export const AIAssistant: React.FC = () => {
     ]);
   };
 
-  // Format markdown helper (bold tags to HTML, lists to bullets)
+  // Securing rendering helper to split bold tags and render React elements instead of HTML strings
+  const renderLineContent = (line: string) => {
+    const parts = line.split("**");
+    return parts.map((part, index) => {
+      if (index % 2 === 1) {
+        return <strong key={index} className="text-accent-blue font-semibold">{part}</strong>;
+      }
+      return part;
+    });
+  };
+
   const formatText = (text: string) => {
     return text.split("\n").map((line, idx) => {
-      // Bold
-      let formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong class="text-accent-blue font-semibold">$1</strong>');
       // Headers
-      if (formattedLine.startsWith("###")) {
-        return <h4 key={idx} className="font-bold text-sm text-text-primary mt-3 mb-1 uppercase tracking-wide" dangerouslySetInnerHTML={{ __html: formattedLine.replace("###", "") }} />;
+      if (line.startsWith("###")) {
+        const cleanHeader = line.replace("###", "").trim();
+        return (
+          <h4 key={idx} className="font-bold text-sm text-text-primary mt-3 mb-1 uppercase tracking-wide">
+            {renderLineContent(cleanHeader)}
+          </h4>
+        );
       }
       // Bullet points
-      if (formattedLine.startsWith("- ")) {
-        return <li key={idx} className="ml-4 list-disc text-xs text-text-secondary leading-relaxed mt-1" dangerouslySetInnerHTML={{ __html: formattedLine.substring(2) }} />;
+      if (line.startsWith("- ")) {
+        const cleanBullet = line.substring(2).trim();
+        return (
+          <li key={idx} className="ml-4 list-disc text-xs text-text-secondary leading-relaxed mt-1">
+            {renderLineContent(cleanBullet)}
+          </li>
+        );
       }
-      return <p key={idx} className="text-xs text-text-secondary leading-relaxed mt-2 font-light" dangerouslySetInnerHTML={{ __html: formattedLine }} />;
+      // Paragraph
+      return (
+        <p key={idx} className="text-xs text-text-secondary leading-relaxed mt-2 font-light">
+          {renderLineContent(line)}
+        </p>
+      );
     });
   };
 
@@ -282,7 +305,7 @@ export const AIAssistant: React.FC = () => {
                       {m.actions.map((act, actIdx) => (
                         <button
                           key={actIdx}
-                          onClick={() => setActivePage(act.page as any)}
+                          onClick={() => setActivePage(act.page as PageType)}
                           className="px-3.5 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.08] hover:border-white/[0.15] text-[10px] text-accent-blue font-bold flex items-center gap-1 cursor-pointer transition-colors"
                         >
                           {act.label} <ArrowRight className="w-3 h-3" />

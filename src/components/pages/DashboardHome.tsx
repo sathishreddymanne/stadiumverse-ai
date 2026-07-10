@@ -20,7 +20,7 @@ import {
   DollarSign,
   FlameKindling
 } from "lucide-react";
-import { useStadium } from "../../context/StadiumContext";
+import { useStadium, PageType } from "../../context/StadiumContext";
 import { GlassCard } from "../primitives/GlassCard";
 import { StatRing } from "../primitives/StatRing";
 import { AnimatedCounter } from "../primitives/AnimatedCounter";
@@ -297,7 +297,7 @@ export const DashboardHome: React.FC = () => {
           {quickActions.map((a, idx) => (
             <GlassCard 
               key={idx} 
-              onClick={() => setActivePage(a.page as any)}
+              onClick={() => setActivePage(a.page as PageType)}
               className="p-4 flex items-center gap-3.5 hover:bg-white/[0.04] transition-all"
             >
               <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.07] flex items-center justify-center">

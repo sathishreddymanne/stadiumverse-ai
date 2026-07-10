@@ -276,7 +276,7 @@ export const LandingPage: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <p className="text-text-primary text-sm md:text-base italic leading-relaxed font-light">
-                  "{testimonials[activeTestimonial].quote}"
+                  &quot;{testimonials[activeTestimonial].quote}&quot;
                 </p>
                 
                 <div className="flex items-center gap-4 mt-8">
